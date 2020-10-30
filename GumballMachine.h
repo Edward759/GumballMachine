@@ -5,8 +5,8 @@
 
 class GumballMachine{
 public:
-	GumballMachine(int c);
-	~GumballMachine() = default;
+	GumballMachine();
+	~GumballMachine(){};
 
 	void insertQuarter();
 	void ejectQuarter();

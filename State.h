@@ -6,13 +6,12 @@ using namespace std;
 
 class State{
 public:
-	State() = default;
-	virtual ~State() = default;
+	virtual ~State(){};
 
-	virtual void insertQuarter();
-	virtual void ejectQuarter();
-	virtual void turnCrank();
-	virtual void dispense();
+	virtual void insertQuarter(){};
+	virtual void ejectQuarter(){};
+	virtual void turnCrank(){};
+	virtual void dispense(){};
 };
 
 #endif

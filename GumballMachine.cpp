@@ -1,8 +1,16 @@
 #include "GumballMachine.h"
+#include "HasQuarterState.h"
+#include "NoQuarterState.h"
+#include "SoldOutState.h"
+#include "SoldState.h"
 
-GumballMachine::GumballMachine(int c)
+GumballMachine::GumballMachine()
 {
-	count = c;
+	hasQuarterState = new HasQuarterState(this);
+	noQuarterState = new NoQuarterState(this);
+	soldOutState = new SoldOutState(this);
+	soldState = new SoldState(this);
+
 	state = noQuarterState;
 }
 

@@ -1,6 +1,3 @@
-#ifndef SOLDSTATE_H
-#define SOLDSTATE_H
-
 #include "State.h"
 #include "GumballMachine.h"
 
@@ -16,4 +13,3 @@ public:
 private:
 	GumballMachine *gumballMachine;
 };
-#endif
