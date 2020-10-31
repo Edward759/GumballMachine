@@ -4,7 +4,7 @@ int main()
 {
 
 	GumballMachine *gumballmachine = new GumballMachine();
-	gumballmachine->setCount(5);
+	gumballmachine->setCount(10);
 
 	gumballmachine->printInfo();
 	cout << endl;
@@ -14,6 +14,51 @@ int main()
 	gumballmachine->printInfo();
 	cout << endl;
 
+	gumballmachine->insertQuarter();
+	gumballmachine->turnCrank();
+	gumballmachine->printInfo();
+	cout << endl;
+
+	gumballmachine->insertQuarter();
+	gumballmachine->turnCrank();
+	gumballmachine->printInfo();
+	cout << endl;
+
+	gumballmachine->insertQuarter();
+	gumballmachine->turnCrank();
+	gumballmachine->printInfo();
+	cout << endl;
+
+	gumballmachine->insertQuarter();
+	gumballmachine->turnCrank();
+	gumballmachine->printInfo();
+	cout << endl;
+
+	gumballmachine->insertQuarter();
+	gumballmachine->turnCrank();
+	gumballmachine->printInfo();
+	cout << endl;
+
+	gumballmachine->insertQuarter();
+	gumballmachine->turnCrank();
+	gumballmachine->printInfo();
+	cout << endl;
+
+	gumballmachine->insertQuarter();
+	gumballmachine->turnCrank();
+	gumballmachine->printInfo();
+	cout << endl;
+
+	gumballmachine->insertQuarter();
+	gumballmachine->turnCrank();
+	gumballmachine->printInfo();
+	cout << endl;
+
+	gumballmachine->insertQuarter();
+	gumballmachine->turnCrank();
+	gumballmachine->printInfo();
+	cout << endl;
+/*
 	gumballmachine->insertQuarter();
 	gumballmachine->ejectQuarter();
 	gumballmachine->turnCrank();
@@ -36,7 +81,7 @@ int main()
 	gumballmachine->insertQuarter();
 	gumballmachine->turnCrank();
 	gumballmachine->printInfo();
-	cout << endl;
+	cout << endl;*/
 
 	system("pause");
 }

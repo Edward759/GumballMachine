@@ -33,6 +33,9 @@
     <ClCompile Include="SoldState.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="WinnerState.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="State.h">
@@ -51,6 +54,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="SoldState.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WinnerState.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

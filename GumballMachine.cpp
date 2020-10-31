@@ -3,6 +3,7 @@
 #include "NoQuarterState.h"
 #include "SoldOutState.h"
 #include "SoldState.h"
+#include "WinnerState.h"
 
 GumballMachine::GumballMachine()
 {
@@ -10,6 +11,7 @@ GumballMachine::GumballMachine()
 	noQuarterState = new NoQuarterState(this);
 	soldOutState = new SoldOutState(this);
 	soldState = new SoldState(this);
+	winnerState = new WinnerState(this);
 
 	state = noQuarterState;
 }
@@ -53,6 +55,19 @@ int GumballMachine::getCount()
 	return count;
 }
 
+void GumballMachine::ReleaseBall()
+{
+	cout << "A gumball comes rolling out the slot." << endl;
+	if (count != 0)
+		count--;
+}
+
+void GumballMachine::refill(int cnt)
+{
+	count = cnt;
+	state = noQuarterState;
+}
+
 State* GumballMachine::getHasQuarterState()
 {
 	return hasQuarterState;
@@ -71,4 +86,9 @@ State* GumballMachine::getSoldOutState()
 State* GumballMachine::getSoldState()
 {
 	return soldState;
+}
+
+State* GumballMachine::getWinnerState()
+{
+	return winnerState;
 }

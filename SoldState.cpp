@@ -23,4 +23,14 @@ void SoldState::turnCrank()
 void SoldState::dispense()
 {
 	cout << "Please wait, the gumball is rolling out." << endl;
+	gumballMachine->ReleaseBall();
+	if (gumballMachine->getCount() > 0)
+	{
+		gumballMachine->setState(gumballMachine->getNoQuarterState());
+	}
+	else
+	{
+		cout << "Oops, out of gumballs." << endl;
+		gumballMachine->setState(gumballMachine->getSoldOutState());
+	}
 }

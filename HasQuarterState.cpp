@@ -19,19 +19,19 @@ void HasQuarterState::ejectQuarter()
 void HasQuarterState::turnCrank()
 {
 	cout << "You turned..." << endl;
+	int winner = rand() % 10;
+	if (winner == 0 && gumballMachine->getCount() > 1)
+	{
+		gumballMachine->setState(gumballMachine->getWinnerState());
+	}
+	else
+	{
+		gumballMachine->setState(gumballMachine->getSoldState());
+	}
 
-	gumballMachine->setState(gumballMachine->getSoldState());
 }
 
 void HasQuarterState::dispense()
 {
-	int count = gumballMachine->getCount() - 1;
-	gumballMachine->setCount(count);
-
-	if (count == 0)
-		gumballMachine->setState(gumballMachine->getSoldOutState());
-	else
-		gumballMachine->setState(gumballMachine->getNoQuarterState());
-
-	cout << "Please wait, the gumball is rolling out." << endl;
+	cout << "No gumball dispense." << endl;
 }
